@@ -229,6 +229,49 @@ body {
   font-size: 16px;
 }
 
+/* ハンバーガーメニューボタン */
+.menu-toggle {
+  margin-left: auto;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* メニュー本体 */
+.menu {
+  display: none; /* 初期は非表示 */
+  position: absolute;
+  top: 80px; /* headerの下に出す */
+  right: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* メニューリスト */
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.menu ul li {
+  padding: 10px 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.menu ul li a:hover {
+  color: #007BFF;
+}
+
+
 /* タスク
 ・ハンバーガーメニュー
 ・SNSアカウント・アイコン探し　貼り付け 
