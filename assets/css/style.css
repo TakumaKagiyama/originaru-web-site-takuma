@@ -111,8 +111,9 @@ body {
 .seven a {
   margin: 0 10px;
   text-decoration: none;
-  color: #fff;
-  font-size: 18px;
+  color:blue;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .seven a:hover {
@@ -187,7 +188,7 @@ body {
 
 .slide img {
   width: 100%;
-  height: 50%;
+  height: 500px;
   object-fit: cover;
   display: block;
 }
@@ -245,7 +246,7 @@ body {
   background: white;
   border: 1px solid #ccc;
   border-radius: 10px;
-  width: 200px;
+  width: 400px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1000;
 }
@@ -269,6 +270,62 @@ body {
 
 .menu ul li a:hover {
   color: #007BFF;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95); /* 白背景を半透明にして浮き立たせる */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.hamburger-menu li {
+  margin: 20px 0;
+}
+
+.hamburger-menu a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* メニューが開いたとき */
+.hamburger-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* SNSリンクのスタイル */
+.social-link {
+  font-size: 1.5rem; /* アイコンのサイズ */
+  color: blue; /* リンクとアイコンの色（白） */
+  margin-right: 20px; /* リンク間のスペース */
+  text-decoration: none; /* 下線を消す */
+}
+
+.social-link i {
+  margin-right: 8px; /* アイコンとテキストの間隔 */
+}
+
+/* ホバー時に色を変える */
+.social-link:hover {
+  color: #0073e6; /* ホバー時の色（青） */
 }
 
 

@@ -4,47 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oideto!yokosuka!!!</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ここに追加CSSも書きます */
+    .menu-toggle {
+      cursor: pointer;
+      font-size: 2rem;
+    }
+    .hamburger-menu {
+      display: none;
+    }
+    .hamburger-menu.active {
+      display: block;
+    }
+    @media (min-width: 1024px) {
+      .menu-toggle {
+        font-size: 3rem; /* PCの時に大きく */
+      }
+    }
+    @media (max-width: 767px) {
+      .menu-toggle {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    /* footer修正用 */
+    .footer-custom {
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
-<link rel="stylesheet" href="./assets/css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <body>
   <header class="king">
     <img src="./assets/img/yokosuka_symbol.jpg" alt="横須賀市ロゴ" width="70px">
     <h1>OIDEYO!YOKOSUKA!!!</h1>
     <!-- ハンバーガーメニューのボタン -->
-<div class="menu-toggle" id="menu-toggle">
-  <i class="fas fa-bars"></i>
-</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
 
-<!-- ハンバーガーメニューの中身 -->
-<nav class="menu" id="menu">
-  <ul>
-    <li><a href="#recommend-spot">Recommend spot</a></li>
-    <li><a href="#how-about">How about yokosuka city</a></li>
-    <li><a href="#official-sns">OFFICIAL SNS</a></li>
-  </ul>
-</nav>
-
-<section class="jack" id="recommend-spot">
-  <!-- Recommend spot の内容 -->
-</section>
-
-<section class="nine" id="how-about">
-  <!-- How about yokosuka city の内容 -->
-</section>
-
-<footer class="eight" id="official-sns">
-  <!-- OFFICIAL SNS の内容 -->
-</footer>
-
+    <!-- ハンバーガーメニューの中身 -->
+    <nav class="hamburger-menu" id="hamburger-menu">
+      <ul>
+        <li><a href="#recommend-spot">Recommend spot</a></li>
+        <li><a href="#how-about">How about yokosuka city</a></li>
+        <li><a href="#official-sns">OFFICIAL SNS</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="queen">
     <iframe width="100%" height="500" src="https://www.youtube.com/embed/1xjX8rb1Eik?autoplay=1&mute=1&loop=1&playlist=1xjX8rb1Eik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </section>
-  
-  <section class="jack">
+
+  <section id="recommend-spot" class="jack">
     <h2>Recommend spot</h2>
     <div class="ten">
       <div class="spot-links">
@@ -66,54 +85,61 @@
         <a href="https://www.google.com/maps/search/?q=横須賀+買い物" target="_blank" class="spot-link">
           <i class="fas fa-shopping-cart"></i><span>買い物</span>
         </a>
-        </div>
+      </div>
     </div>
   </section>
 
   <section class="slider-section">
     <div class="slider">
       <div class="slides">
-        <div class="slide"><img src="./assets/img/くりはま花の国.jpg" alt="Image 1">くりはま花の国</div>
-        <div class="slide"><img src="./assets/img/しょうぶ園.jpg" alt="Image 2">しょうぶ園</div>
-        <div class="slide"><img src="./assets/img/天神島臨海自然教育園.jpg" alt="Image 3">天神島臨海自然教育園</div>
-        <div class="slide"><img src="./assets/img/燈明堂.jpg" alt="Image 4">燈明堂</div>
-        <div class="slide"><img src="./assets/img/猿島.jpg" alt="Image 5">猿島</div>
-        <div class="slide"><img src="./assets/img/田浦梅の里.jpg" alt="Image 6">田浦梅の里</div>
-        <div class="slide"><img src="./assets/img/衣笠山.jpg" alt="Image 7">衣笠山</div>
-        <div class="slide"><img src="./assets/img/観音崎.jpg" alt="Image 8">観音崎</div>
-        <div class="slide"><img src="./assets/img/走水.jpg" alt="Image 9">走水</div>
-        <div class="slide"><img src="./assets/img/鷹取山公園.jpg" alt="Image 10">鷹取山公園</div>
+        <div class="slide"><img src="./assets/img/くりはま花の国.jpg" alt="Image 1">Kurihama hananokuni（くりはま花の国）</div>
+        <div class="slide"><img src="./assets/img/しょうぶ園.jpg" alt="Image 2">Shoubuen（しょうぶ園）</div>
+        <div class="slide"><img src="./assets/img/天神島臨海自然教育園.jpg" alt="Image 3">Tenjinjimarinkaisizenkyouikuen（天神島臨海自然教育園）</div>
+        <div class="slide"><img src="./assets/img/燈明堂.jpg" alt="Image 4">Tounyoudou（燈明堂）</div>
+        <div class="slide"><img src="./assets/img/猿島.jpg" alt="Image 5">Sarushima（猿島）</div>
+        <div class="slide"><img src="./assets/img/田浦梅の里.jpg" alt="Image 6">Tauraumenosato（田浦梅の里）</div>
+        <div class="slide"><img src="./assets/img/衣笠山.jpg" alt="Image 7">Kinugasayama（衣笠山）</div>
+        <div class="slide"><img src="./assets/img/観音崎.jpg" alt="Image 8">Kannonzaki（観音崎）</div>
+        <div class="slide"><img src="./assets/img/走水.jpg" alt="Image 9">Hashirimizu（走水）</div>
+        <div class="slide"><img src="./assets/img/鷹取山公園.jpg" alt="Image 10">Takatoriyamakouen（鷹取山公園）</div>
       </div>
     </div>
   </section>  
 
-  <section class="nine">
+  <section id="how-about" class="nine">
     <h3>How about yokosuka city</h3>
     <p id="text-ja" lang="ja">
-      横須賀市は神奈川県南部に位置し、三浦半島の中心に広がる海と歴史の街。<br>
-      日本の海軍文化の拠点であり、外国文化が混ざり合ったユニークな雰囲気が特徴です。<br>
-      ドブ板通りや観音崎、猿島など観光名所も豊富です。
+      神奈川県南東部に位置する三浦半島の北半分を占め、市域の東側は東京湾（浦賀水道）、西側は相模湾に面する。東京湾唯一の自然島である猿島も行政区域に含まれる。<br>行政区域内標高の最高点は大楠山の標高242mであり三浦半島の最高峰となっている。それほど標高が高い山はないが、中央部は山間部や急峻な丘陵部（三浦丘陵）が中心で平地は少ない。そのために古くから海岸線の埋め立てが行われており、現在の中心市街地（京急の横須賀中央駅周辺）も大部分が埋立地にある。<br>また、海岸沿いまで山が迫る地形のためトンネルが多いのも特徴で、神奈川県にある道路・鉄道トンネルのおよそ半数が市内に集中している。直下には三浦半島断層群が所在している。<br>
+      三浦半島の中心都市である。市内の行政・経済的都市機能が集中する東京湾岸には大工場や住宅群がひしめきあうが、相模湾岸には自然が多く残され農業も盛んである。市内中心部から東京都心までは京急本線で約1時間の距離で、JR横須賀線では約1時間10分かかる。<br>また、横浜横須賀道路などの地域高規格道路が整備されており、平日朝の通勤時間帯では、羽田空港まで約1時間、東京都心へは1時間15分程度の所要時間となっている。<br>
+      東京湾の入口に位置するために江戸時代から国防の拠点とされ、戦前には大日本帝国海軍横須賀鎮守府や横須賀海軍工廠を擁する軍港都市（軍都）として栄えた。幕末には市内東部の浦賀にペリーが来航したことでも有名である（黒船来航）。現在もアメリカ海軍第7艦隊・横須賀海軍施設および海上自衛隊自衛艦隊・横須賀地方隊および陸上自衛隊武山駐屯地・久里浜駐屯地や航空自衛隊武山分屯基地などの基地が置かれており、現在でもかつての軍都・軍港としての名残を多く残す。また自衛隊関係の教育施設(防衛大学校、陸上自衛隊高等工科学校)も置かれている。<br>
+      三浦丘陵に位置するために、地形が山がちという地理的要因により、今後は飛躍的な人口増加を望めないことから、「国際海の手文化都市」をスローガンに「交流人口」（仕事やレジャーでの流入人口）の増加を狙い「また来てもらえる街」を目指している。施策として横須賀リサーチパーク (YRP) 開設やよこすか海辺ニュータウンの開発、高等教育機関（神奈川県立保健福祉大学、陽光小学校跡地への福祉系4年制大学）の誘致。<br>海軍カレー、ヨコスカネイビーバーガー（ご当地バーガー）によるまちおこし、異国情緒漂うどぶ板通り、映画撮影や市内が登場するアニメ作品の誘致やタイアップ企画。ヴェルニー公園（1万メートルプロムナード計画の起点）、三笠公園、くりはま花の国、長井海の手公園 ソレイユの丘、横須賀美術館などの、観光施設の整備などが積極的に行われている。
     </p>
     <p id="text-en" lang="en" style="display: none;">
-      Yokosuka City is located in the southern part of Kanagawa Prefecture, a city of sea and history spread across the center of the Miura Peninsula.<br>
-      It is a hub of Japanese naval culture and features a unique atmosphere blending foreign cultures.<br>
-      There are many tourist attractions such as Dobuita Street, Kannonzaki, and Sarushima.
+      Located in the southeastern part of Kanagawa Prefecture, the northern half of the Miura Peninsula occupies the eastern side facing Tokyo Bay (Uraga Channel) and the western side facing Sagami Bay. Sarushima, the only natural island in Tokyo Bay, is also part of the administrative region. The highest point in the area is Mount Okusu, with an elevation of 242 meters, making it the highest peak of the Miura Peninsula. While there are not many high mountains, the central part of the peninsula consists of mountainous and steep hilly terrain (Miura Hills), with limited flat land. As a result, land reclamation along the coastline has been carried out since ancient times, and much of the current central urban area (around Keikyu’s Yokosuka Chūō Station) is on reclaimed land. Additionally, due to the geography where mountains approach the coastline, there are many tunnels, with nearly half of the road and railway tunnels in Kanagawa Prefecture being concentrated within the city. The Miura Peninsula Fault Zone lies directly beneath the city.
+      It is the central city of the Miura Peninsula. In the Tokyo Bay area, where administrative and economic functions are concentrated, large factories and residential areas are densely packed. On the Sagami Bay side, however, nature remains abundant, and agriculture is thriving. From the city center, it takes about 1 hour by Keikyu Main Line to reach downtown Tokyo, and about 1 hour 10 minutes by JR Yokosuka Line. Regional high-standard roads like the Yokohama Yokosuka Expressway are well developed, and during weekday mornings, it takes about 1 hour to get to Haneda Airport and 1 hour 15 minutes to reach downtown Tokyo.
+      Due to its location at the entrance of Tokyo Bay, the area has been a strategic point for national defense since the Edo period. Before the war, it prospered as a military port city, hosting the Imperial Japanese Navy’s Yokosuka Naval District and the Yokosuka Naval Arsenal. The area is also famous for the arrival of Commodore Perry in the eastern part of the city, at Uraga, during the late Edo period (the arrival of the black ships). Today, there are still military bases such as the U.S. Navy’s 7th Fleet and Yokosuka Naval Facilities, the Japan Maritime Self-Defense Force’s Self-Defense Fleet, the Yokosuka District, the Japan Ground Self-Defense Force’s Takeyama Garrison, Kurihama Garrison, and the Japan Air Self-Defense Force’s Takeyama Sub-base. The area still retains much of its military port city legacy. Furthermore, educational institutions related to the Self-Defense Forces, such as the National Defense Medical College and the Japan Ground Self-Defense Force Technical School, are also located in the city.Due to its location in the Miura Hills, the geography of the area, with its mountainous terrain, means that significant population growth is unlikely in the future. As a result, the city aims to increase its "exchange population" (people visiting for work or leisure) with the slogan of becoming an "International Seaside Cultural City." The goal is to become a "city that people will want to visit again." Initiatives include the establishment of the Yokosuka Research Park (YRP), the development of the Yokosuka Seaside New Town, and the attraction of higher education institutions (such as the Kanagawa Prefectural University of Health and Welfare and a welfare-related four-year university on the site of the former Yoko School). The city also promotes local initiatives such as the Navy Curry and Yokosuka Navy Burger (local specialties), the exotic atmosphere of Dobuita Street, the attraction and collaboration of movie and anime productions set in the city, and the development of tourist facilities such as Verny Park (the starting point for the 10,000-meter promenade plan), Mikasa Park, Kurihama Flower World, Naganoshima Seaside Park Soleil Hill, and the Yokosuka Museum of Art.
     </p>
     <div class="language-switcher">
       <button id="btn-ja">日本語</button>
       <button id="btn-en">English</button>
-    </div>    
+    </div>
   </section>
-  
-  <footer class="eight">
+
+  <footer id="official-sns" class="footer-custom">
     <h4>OFFICIAL SNS</h4>
     <div class="seven">
-      <a href="https://www.instagram.com" target="_blank">📷 Instagram</a>
-      <a href="https://x.com" target="_blank">🐦 X（旧Twitter）</a>
-      <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+      <a href="https://www.instagram.com" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://x.com" target="_blank" class="social-link">
+        <i class="fab fa-x"></i> X（旧Twitter）
+      </a>
+      <a href="https://facebook.com" target="_blank" class="social-link">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
     </div>
-    <p>&copy; 2025 Oideyo! Yokosuka!!!</p>
-  </footer>
+    <p>&copy; 2025 OIDEYO! YOKOSUKA!!!</p>
+  </footer>  
 
   <script src="./assets/script.js"></script>
 </body>
