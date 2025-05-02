@@ -134,9 +134,14 @@ body {
   }
 
   .jack h2,
-  .nine h3 {
+  .nine h3 
+  {
     font-size: 20px;
     text-align: center;
+  }
+
+  .seven a{
+    font-size: 16px;
   }
 
   .spot-links {
